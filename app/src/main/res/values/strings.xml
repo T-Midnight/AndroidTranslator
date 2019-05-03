@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidTranslator</string>
+    <string name="langFrom">en</string>
+    <string name="langTo">ru</string>
+    <string name="YandexAPI">Переведено сервисом «Яндекс.Переводчик»</string>
+    <string name="YandexAPILink"><a href="http://translate.yandex.ru" rel="nofollow">Yandex Translate</a></string>
 </resources>
