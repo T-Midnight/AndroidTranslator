@@ -11,10 +11,10 @@
         android:id="@+id/tVAPI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/btnTranslate"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="443dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="284dp"
         android:gravity="center"
         android:text="@string/YandexAPI"
         android:textColor="@color/colorInfo" />
@@ -26,12 +26,55 @@
         android:layout_below="@+id/tVAPI"
         android:layout_alignStart="@+id/tVAPI"
         android:layout_marginStart="96dp"
-        android:layout_marginTop="1dp"
-        android:autoLink="all"
+        android:layout_marginTop="0dp"
+        android:autoLink="web"
         android:linksClickable="true"
         android:text="@string/YandexAPILink"
         android:textAllCaps="false"
         android:textColor="@color/colorInfo"
         android:textColorLink="@color/colorInfo"
         android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btnTranslate"
+        android:layout_width="149dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etFrom"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="14dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/buttonTranslate"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <EditText
+        android:id="@+id/etTo"
+        android:layout_width="321dp"
+        android:layout_height="85dp"
+        android:layout_below="@+id/btnTranslate"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="25dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text"
+        android:hint="Перевод"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="300"
+        android:maxLines="4" />
+
+    <EditText
+        android:id="@+id/etFrom"
+        android:layout_width="323dp"
+        android:layout_height="85dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/edit_text"
+        android:ems="10"
+        android:hint="Слово"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="300"
+        android:maxLines="4" />
+
 </RelativeLayout>
