@@ -3,9 +3,13 @@
     <string name="langFrom">en</string>
     <string name="langTo">ru</string>
     <string name="YandexAPI">Переведено сервисом «Яндекс.Переводчик»</string>
-    <string name="YandexAPILink"><a href="http://translate.yandex.ru" rel="nofollow">Yandex Translate
+    <string name="YandexAPILink"><a href="http://translate.yandex.ru">Yandex Translate
         </a></string>
     <string name="buttonTranslate">Перевести</string>
     <string name="chooseLanguageFrom">С какого языка</string>
     <string name="chooseLanguageTo">На какой язык</string>
+    <string name="historyCount">Количество записей в истории: </string>
+    <string name="hintWord">Слово</string>
+    <string name="hintTranslate">Перевод</string>
+    <string name="hintHistory">Просмотр истории переводов</string>
 </resources>
