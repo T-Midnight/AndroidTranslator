@@ -23,6 +23,13 @@ public class History {
         langTo = "";
     }
 
+    public History(String word, String translate, String langFrom, String langTo) {
+        this.word = word;
+        this.translate = translate;
+        this.langFrom = langFrom;
+        this.langTo = langTo;
+    }
+
     private void fromCursor(Cursor cursor){
         id = cursor.getInt(cursor.getColumnIndex(HistoryEntry._ID));
         word  = cursor.getString(cursor.getColumnIndex(HistoryEntry.COLUMN_WORD));
@@ -31,7 +38,7 @@ public class History {
         langTo = cursor.getString(cursor.getColumnIndex(HistoryEntry.COLUMN_LANG_TO));
     }
 
-    public static List<String> getLanguagesFromCursor(Cursor cursor){
+    public static List<String> getHistoryStringFromCursor(Cursor cursor){
         List<String> historyList = new ArrayList<>();
         if (cursor != null) {
             while (cursor.moveToNext()) {
@@ -41,7 +48,7 @@ public class History {
                         historyItem.word + " -- " +
                         historyItem.translate + " -- " +
                         historyItem.langFrom + " -- " +
-                        historyItem.langTo);
+                        historyItem.langTo + "\n");
             }
         }
         return historyList;
