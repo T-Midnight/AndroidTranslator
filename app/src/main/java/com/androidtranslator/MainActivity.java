@@ -15,7 +15,6 @@ import com.androidtranslator.data.HistoryContract;
 import static com.androidtranslator.data.HistoryContract.*;
 
 public class MainActivity extends AppCompatActivity {
-    private final String API_KEY = "trnsl.1.1.20190503T132704Z.4e36b17ed2836893.5b0339809720cab8b47a4f74fae8390374e0209d";
     Button button;
     EditText etFrom;
     EditText etTo;
