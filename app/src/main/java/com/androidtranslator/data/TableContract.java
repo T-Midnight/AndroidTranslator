@@ -23,7 +23,7 @@ public class TableContract {
         public final static String COLUMN_LANG_FROM = "langFrom";
         public final static String COLUMN_LANG_TO = "langTo";
 
-        private static List<String> historyItems;
+        private static List<String> historyStringItems;
 
         public static void insertTestData(DbHelper mDbHelper) {
             SQLiteDatabase db = mDbHelper.getWritableDatabase();
@@ -37,8 +37,8 @@ public class TableContract {
         }
 
         public static List<String> getStringHistory(DbHelper mDbHelper) {
-            if (historyItems != null) {
-                return historyItems;
+            if (historyStringItems != null) {
+                return historyStringItems;
             }
             return getDBHistory(mDbHelper);
         }
@@ -51,12 +51,23 @@ public class TableContract {
 
             Cursor cursor = db.query(TABLE_NAME, projection, null, null,
                     null, null, "_ID ASC");
-            historyItems = History.getLanguagesFromCursor(cursor);
+            historyStringItems = History.getHistoryStringFromCursor(cursor);
 
             if (cursor != null) {
                 cursor.close();
             }
-            return historyItems;
+            return historyStringItems;
+        }
+
+        public static void insert(History historyItem, DbHelper mDbHelper) {
+            SQLiteDatabase db = mDbHelper.getWritableDatabase();
+            ContentValues values = new ContentValues();
+            values.put(COLUMN_WORD, historyItem.word);
+            values.put(COLUMN_TRANSLATE, historyItem.translate);
+            values.put(COLUMN_LANG_FROM, historyItem.langFrom);
+            values.put(COLUMN_LANG_TO, historyItem.langTo);
+
+            long newRowId = db.insert(TABLE_NAME, null, values);
         }
     }
 
