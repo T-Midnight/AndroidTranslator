@@ -5,8 +5,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 //контейнер для базы данных
 public class TableContract {
@@ -23,7 +25,7 @@ public class TableContract {
         public final static String COLUMN_LANG_FROM = "langFrom";
         public final static String COLUMN_LANG_TO = "langTo";
 
-        private static List<String> historyStringItems;
+        private static List<String> historyStringItems = new ArrayList<>();
 
         public static void insertTestData(DbHelper mDbHelper) {
             SQLiteDatabase db = mDbHelper.getWritableDatabase();
@@ -37,7 +39,7 @@ public class TableContract {
         }
 
         public static List<String> getStringHistory(DbHelper mDbHelper) {
-            if (historyStringItems != null) {
+            if (!historyStringItems.isEmpty()) {
                 return historyStringItems;
             }
             return getDBHistory(mDbHelper);
@@ -78,7 +80,7 @@ public class TableContract {
         public final static String COLUMN_CODE = "code";
         public final static String COLUMN_TRANSCRIPT = "transcript";
 
-        private static Map<String, String> languages;
+        private static Map<String, String> languages  = new TreeMap<>();;
 
         public static Map<String, String> getMapLanguages(DbHelper mDbHelper) {
             if (!languages.isEmpty()) {
