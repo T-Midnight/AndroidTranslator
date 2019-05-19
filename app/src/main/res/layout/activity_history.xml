@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,9 +24,22 @@
     <TextView
         android:id="@+id/tVItems"
         android:layout_width="match_parent"
-        android:layout_height="288dp"
+        android:layout_height="360dp"
+        android:scrollbars="vertical"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="29dp" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="@string/back"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 
 </LinearLayout>
