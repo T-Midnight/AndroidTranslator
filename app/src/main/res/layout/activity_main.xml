@@ -53,8 +53,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tVAPI"
         android:layout_alignStart="@+id/tVAPI"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="-1dp"
         android:autoLink="web"
         android:linksClickable="true"
         android:text="@string/YandexAPILink"
@@ -99,24 +99,25 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="33dp"
         android:layout_marginTop="16dp"
+        android:autofillHints=""
         android:background="@drawable/edit_text"
+        android:focusableInTouchMode="false"
         android:hint="@string/hintTranslate"
         android:inputType="textCapSentences|textMultiLine"
         android:maxLength="300"
         android:maxLines="4"
-        android:autofillHints="" />
+        android:textColor="@android:color/black" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
         android:layout_below="@+id/etTo"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="277dp"
-        android:layout_marginTop="47dp"
-        android:background="@drawable/edit_text"
+        android:layout_marginTop="43dp"
+        android:background="@color/colorPrimaryDark"
         android:contentDescription="@string/hintHistory"
-        android:tint="@color/colorPrimaryDark"
+        android:tint="@android:color/white"
         app:srcCompat="@android:drawable/ic_menu_recent_history" />
 
 </RelativeLayout>
