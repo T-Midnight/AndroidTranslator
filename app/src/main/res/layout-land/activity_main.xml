@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:hint="@string/chooseLanguageFrom"
+            android:maxLines="1" />
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:hint="@string/chooseLanguageTo"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="55dp">
+
+        <EditText
+            android:id="@+id/etFrom"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@drawable/edit_text"
+            android:ems="10"
+            android:hint="@string/hintWord"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="300"
+            android:maxLines="4" />
+
+        <EditText
+            android:id="@+id/etTo"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@drawable/edit_text"
+            android:focusableInTouchMode="false"
+            android:hint="@string/hintTranslate"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="300"
+            android:maxLines="4"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tVAPI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnTranslate"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="67dp"
+        android:gravity="center"
+        android:text="@string/YandexAPI"
+        android:textColor="@color/colorInfo" />
+
+    <Button
+        android:id="@+id/btnTranslate"
+        android:layout_width="149dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="148dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/buttonTranslate"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/tVLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tVAPI"
+        android:layout_alignStart="@+id/tVAPI"
+        android:layout_marginStart="299dp"
+        android:layout_marginTop="-19dp"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:text="@string/YandexAPILink"
+        android:textAllCaps="false"
+        android:textColor="@color/colorInfo"
+        android:textColorLink="@color/colorInfo"
+        android:textStyle="italic" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/btnTranslate"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="11dp"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="@string/hintHistory"
+        android:tint="@android:color/white"
+        app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+</RelativeLayout>
