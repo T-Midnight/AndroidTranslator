@@ -12,5 +12,5 @@
     <string name="hintTranslate">Перевод</string>
     <string name="hintHistory">Просмотр истории переводов</string>
     <string name="API_KEY">trnsl.1.1.20190503T132704Z.4e36b17ed2836893.5b0339809720cab8b47a4f74fae8390374e0209d</string>
-    <string name="back">Back</string>
+    <string name="back">Back </string>
 </resources>
